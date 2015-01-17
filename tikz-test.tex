@@ -1,0 +1,19 @@
+\documentclass{letter}
+\usepackage[letterpaper,margin=1in,heightrounded]{geometry}
+%
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{invoice}
+\begin{document}
+\begin{letter}{Customer name \\ Customer Street \\ Customer ZIP}
+  \opening{Invoice no. 1001}
+  My Greeting
+  \begin{invoice}{Dollar}{0}
+    \ProjectTitle{Example Project}%
+    \Fee{Development} {1000.00} {1}
+\end{invoice}
+\closing{My Closing}
+\end{letter}%
+
+\end{document}

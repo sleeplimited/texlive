@@ -2,55 +2,57 @@
 \usepackage[letterpaper,margin=1in,heightrounded]{geometry}
 %
 \usepackage{tikz}
-\usepackage{graphicx}
-\usepackage{fouriernc}
-\usepackage{fixltx2e}
+% \usepackage{graphicx}
+% \usepackage{fouriernc}
+% \usepackage{fixltx2e}
 %
-\usetikzlibrary{calc}
+ \usetikzlibrary{calc}
 %
 \usepackage{invoice}
+
+\begin{document}
 \address{Rachael Carlson \\ 3308 N. Bremen St. \\ Milwaukee, WI 53212 \\ rtc@sleeplimited.org}
 \signature{Rachael Carlson}
 \date{01/09/2015}
-\pagestyle{empty}
-\begin{document}
-\begin{center}
-    \vspace*{1.3cm}
-\begin{tikzpicture}[overlay,remember picture]
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (1.05cm,-1.05cm) $)
-        rectangle
-        ($ (current page.south east) + (-1.05cm,1.05cm) $);
-    \draw [line width=1pt,rounded corners=4pt,
-        ]
-        ($ (current page.north west) + (1.25cm,-1.25cm) $)
-        rectangle
-        ($ (current page.south east) + (-1.25cm,1.25cm) $);
-        \draw [xshift=4mm,line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (.5cm,-.5cm) $)
-        rectangle
-        ($ (current page.south east) + (-.5cm,.5cm) $);
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (1.475cm,-1.475cm) $)
-        rectangle
-        ($ (current page.south east) + (-1.475cm,1.475cm) $);
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (1.725cm,-1.725cm) $)
-        rectangle
-        ($ (current page.south east) + (-1.725cm,1.725cm) $);
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (.875cm,-.875cm) $)
-        rectangle
-        ($ (current page.south east) + (-.875cm,.875cm) $);
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (.6cm,-.6cm) $)
-        rectangle
-        ($ (current page.south east) + (-.6cm,.6cm) $);
-    \draw [line width=1pt,rounded corners=4pt]
-        ($ (current page.north west) + (.725cm,-.725cm) $)
-        rectangle
-        ($ (current page.south east) + (-.725cm,.725cm) $);
-\end{tikzpicture}
+% \begin{center}
+%    \vspace*{1.3cm}
+%\begin{tikzpicture}[overlay,remember picture]
+%    \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (1.05cm,-1.05cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-1.05cm,1.05cm) $);
+%    \draw [line width=1pt,rounded corners=4pt,
+%        ]
+%        ($ (current page.north west) + (1.25cm,-1.25cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-1.25cm,1.25cm) $);
+%        \draw [xshift=4mm,line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (.5cm,-.5cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-.5cm,.5cm) $);
+%    \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (1.475cm,-1.475cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-1.475cm,1.475cm) $);
+%    \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (1.725cm,-1.725cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-1.725cm,1.725cm) $);
+%    \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (.875cm,-.875cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-.875cm,.875cm) $);
+%    \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (.6cm,-.6cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-.6cm,.6cm) $);
+%   \draw [line width=1pt,rounded corners=4pt]
+%        ($ (current page.north west) + (.725cm,-.725cm) $)
+%        rectangle
+%        ($ (current page.south east) + (-.725cm,.725cm) $);
+% \end{tikzpicture}
+
+% \end{center}
 \begin{letter}{Customer name \\ Customer Street \\ Customer ZIP}
   \opening{Invoice no. 1001}
   My Greeting
@@ -59,7 +61,5 @@
     \Fee{Development} {1000.00} {1}
 \end{invoice}
 \closing{My Closing}
-\end{letter}
-\end{center}
-%
+\end{letter}%
 \end{document}

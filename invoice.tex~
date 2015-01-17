@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Invoice Template
+% LaTeX Template
+% Version 1.0 (3/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the invoice.cls file to be in the same directory as 
+% the .tex file. The invoice.cls file provides the style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\documentclass{invoice} % Use the custom invoice class (invoice.cls)
+
+\def \tab {\hspace*{3ex}} % Define \tab to create some horizontal white space
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fouriernc}
+\usepackage{fixltx2e}
+\usetikzlibrary{calc}
+% \usepackage{fontspec}
+% \setmainfont[Mapping=tex-text]{Tex Gyre Heros}
+% \renewcommand{\familydefault}{\sfdefault}
+% \usepackage{helvet}
+\usepackage{tgheros}
+\usepackage{tgschola}
+\usepackage[T1]{fontenc}
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	BORDER SECTION
+%----------------------------------------------------------------------------------------
+
+ \begin{center}
+    \vspace*{1.3cm}
+\begin{tikzpicture}[overlay,remember picture]
+    \draw [line width=1pt,rounded corners=0pt]
+        ($ (current page.north west) + (1.05cm,-1.05cm) $)
+        rectangle
+        ($ (current page.south east) + (-1.05cm,1.05cm) $);
+    \draw [xshift=4mm,line width=1pt,rounded corners=0pt]
+        ($ (current page.north west) + (.5cm,-.5cm) $)
+        rectangle
+        ($ (current page.south east) + (-.5cm,.5cm) $);
+    \draw [line width=1pt,rounded corners=0pt]
+        ($ (current page.north west) + (.875cm,-.875cm) $)
+        rectangle
+        ($ (current page.south east) + (-.875cm,.875cm) $);
+    \draw [line width=1pt,rounded corners=0pt]
+        ($ (current page.north west) + (.6cm,-.6cm) $)
+        rectangle
+        ($ (current page.south east) + (-.6cm,.6cm) $);
+   \draw [line width=1pt,rounded corners=0pt]
+        ($ (current page.north west) + (.725cm,-.725cm) $)
+        rectangle
+        ($ (current page.south east) + (-.725cm,.725cm) $);
+ \end{tikzpicture}
+\end{center}
+%----------------------------------------------------------------------------------------
+%	HEADING SECTION
+%----------------------------------------------------------------------------------------
+
+\hfil{\huge{\textsc{Sleep Limited}}}\hfil % Company providing the invoice
+\bigskip\break % Whitespace
+\hrule % Horizontal line
+
+3308 N Bremen St. \hfill (612) 616-4422 \\ % Your address and contact information
+Milwaukee, WI 53212 \hfill rtc@sleeplimited.org
+\\ \\
+{\bf Invoice To:} \\
+\tab James Smith \\ % Invoice recipient
+\tab Generic Corporation \\ % Recipient's company
+
+{\bf Date:} \hfill {\bf Invoice:} \\
+\tab \today \hfill \fbox{1001} \\ % Invoice date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF EXPENSES
+%----------------------------------------------------------------------------------------
+
+\begin{invoiceTable}
+
+\feetype{} % Fee category description
+
+\hourrow{October 3, 2012}{8}{12} % Each separate billing day includes the date, the number of hours and the hourly rate
+\hourrow{October 4, 2012}{6.5}{12}
+\hourrow{October 5, 2012}{5.25}{12}
+\hourrow{October 10, 2012}{9.75}{20}
+\hourrow{October 11, 2012}{5}{12.51}
+
+%------------------------------------------------
+
+\feetype{Accounting Services} % Fee category description
+
+\hourrow{October 10, 2012}{2}{80}
+\hourrow{October 11, 2012}{1}{80}
+
+\subtotal % Prints a subtotal, can be used multiple times
+
+%------------------------------------------------
+
+\feetype{Hosting Expenses} % Fee category description
+
+\feerow{Web Hosting: October, 2012}{60} % A flat fee service, note there is no hourly rate for this
+
+\end{invoiceTable}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

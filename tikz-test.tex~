@@ -1,0 +1,5 @@
+\documentclass{letter}
+\usepackage[letterpaper,margin=1in,heightrounded]{geometry}
+%
+\usepackage{tikz}
+\usetikzlibrary{calc}
