@@ -1,9 +1,12 @@
 % !TEX TS-program = xelatex
 \documentclass[a4paper,9pt,oneside,landscape]{memoir}
-\usepackage{fontspec}
+% \usepackage{fontspec}
 \usepackage[newdimens]{labels}
-\setmainfont[Numbers={OldStyle,Monospaced}]{Brill}
-\setsansfont{Source Sans Pro Light}
+% \setmainfont[Numbers={OldStyle,Monospaced}]{Brill}
+% \setsansfont{Source Sans Pro Light}
+\usepackage{tgschola}
+\usepackage[T1]{fontenc}
+\graphicspath{ {/home/rtc/lilypond/theShip/TexLive/} }
 \LabelCols=5%
 \LabelRows=2%
 \LeftPageMargin=13.0mm%
@@ -18,22 +21,20 @@
 \BottomLabelBorder=6mm%
 \numberoflabels=10%
 \LabelGridtrue%  <-- or \LabelGridfalse
-\newcommand{\phonei}{+44\textendash2323\textendash323232}
-\newcommand{\phoneii}{+44\textendash7999\textendash797979}
-\newcommand{\emaili}{carlos@dickens.org}
+\newcommand{\phonei}{612\textendash616\textendash4422}
+\newcommand{\emaili}{rtc@sleeplimited.org}
 %
 \begin{document}
 \addresslabel[\fboxsep=5mm]{%
     {%
     \raggedright%
-    {\Large\scshape Charles Dickens}\\[1ex]
-    \textit{Narrative Typography}\      \vspace{4ex}
-    48 Doughty Street\      Holborn\        London\     {\textsc{uk: wc1n 2lx}}\\   
+    {\Large\scshape Rachael Carlson}\\[1ex]
+    \textit{music}\      \vspace{4ex}
+    Milwaukee\        Wisconsin\     {\textsc{}}\\   
     \vspace{4ex}%
     \hrule%
     \vspace{4ex}%
-    \hfill{\small\textit{\phonei}}\\%
-    \hfill{\small\textit{\phoneii}}\\[2ex]%
+    \hfill{\small\textit{\phonei}}\\[2ex]%
     \hfill{\small\sffamily\textbf{\emaili}}%
     }%
 }

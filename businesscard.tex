@@ -1,0 +1,208 @@
+\documentclass{article}
+%    version = 4.03 of businesscard.tex 2012 Apr 29
+% 2012 Apr 29, 4.03: rename from homecard.tex back to businesscard.tex
+% 2012 Apr 29, 4.02: rename from businesscard.tex to homecard.tex
+% 2009 Nov 27, 4.01: multiput the cards now
+% 2009 Nov 26, 4.00: revamp completely using pstricks, geometry packages
+% 2009 Nov 26, 3.16: ?? - can't solve positioning exactly
+% 2009 Nov 26, 3.15: adjust to fit Staples(R) brand business cards
+% 2009 Nov 26, 3.15: adjust to fit standard Tex installation on Mac
+% 2006 Aug 01, 3.14: adjust topmargin to fit A4 paper
+% 2006 May 14, 3.13: clean up
+% 2006 May 14, 3.12: test limits of page - 5 per page works!
+% 2006 May 14, 3.11: proper order of pstricks call
+% 2006 May 13, 3.10: drop pstcol package, it's old!
+% 2006 May 13, 3.09: switch from the color to the pstcol package
+% 2006 May 13, 3.08: new command verticalcards determines number of cards
+% 2006 May 12, 3.07: more documentation
+% 2006 May 12, 3.06: cleanup
+% 2006 May 12, 3.05: rename from workcard.tex to businesscard.tex
+% 2006 May 12, 3.04: brush up
+% 2005 Dec 31, 3.03: functional
+
+% This is a LaTeX file for creating a business card.
+
+% You just supply a 'guts.tex' file and it makes a set of 10 copies
+% per page that you can cut out. I print it on plain paper and
+% although the cards are not stiff, people accept them anyway!  The
+% advantage is that one can always print more, one can change them
+% quickly and they don't cost much.
+
+% This revised version uses standard spacing and so can be printed on
+% pre-perferated card stock paper.
+
+% Two variables, xadjust and yadjust can be set to position the cards
+% exactly onto card stock.  Print on regular paper, With a bright
+% light compare to the stock and measure the change in cm required to
+% determine the adjustments.  Be sure that the papers are aligned at
+% the feeding edge since they can be slightly different sizes.
+
+% This may not be true anymore:
+% With the initial values, businesscard.tex works for both letter and
+% a4 paper, giving 5 cards vertically and 2 horizontally.
+
+% This file reads a file called 'guts.tex'.
+% Use \\ between lines of the guts.
+% You can use pstricks graphics.
+%
+% Example name with date:
+% Tom Schneider \ldots \ldots \ldots \ldots 2005 Sep 7 \\
+% (Note: \dotfill might work nicely, I haven't tried it yet.)
+%
+% Example to input a file:
+% \input workurl.tex
+%
+% Example vertical space, move down:
+% \vspace{3pt} \\
+%
+% Example vertical space, move up:
+% \vspace{-3pt} \\
+%
+% Example graphic:
+% \rotatebox{0}{\scalebox{0.60}{\includegraphics*{something.eps}}}
+%
+% source:
+%
+% http://alum.mit.edu/www/toms/latex.html#businesscard
+%
+% Dr. Thomas D. Schneider
+% National Institutes of Health
+% schneidt@mail.nih.gov
+% toms@alum.mit.edu (permanent)
+% http://alum.mit.edu/www/toms (permanent)
+
+% NOTES
+
+% Note: I have inserted '\usepackage{pst-node}' which allows you to
+% use the powerful PSTricks. If you don't have this package on your
+% computer you will have to install it.
+
+% A4 will have to be redone.
+% Thanks to Bill Purvis (bil@beeb.net, http://bil.members.beeb.net)
+% for help with setting up A4 paper the first time ...
+
+% ******************************************************************************
+% PAGE LAYOUT
+
+% Cards are 3.5x2 inches.
+% The Letter size paper is 8.5x11.
+% Together these can be used to precisely lay out 10 cards as follows.
+
+% Horizontal Card Layout:
+% | edge   | card 1 | card 2 | edge   |
+% | 0.75in | 3.5in  | 3.5in  | 0.75in | = 8.5 wide
+
+% Vertical Card Layout:
+% ------------------ top of paper
+%   0.5 inch space
+% ------------------ top of card 5
+%   2.0 inch card 5
+% ------------------ top of card 4
+%   2.0 inch card 4
+% ------------------ top of card 3
+%   2.0 inch card 3
+% ------------------ top of card 2
+%   2.0 inch card 2
+% ------------------ top of card 1
+%   2.0 inch card 1
+% ------------------ bottom of card 1
+%   0.5 inch space
+% ------------------ bottom of paper
+
+% http://en.wikibooks.org/wiki/LaTeX/Page_Layout
+% \usepackage[top=tlength, bottom=blength, left=llength, right=rlength]{geometry}
+% the 0000 fails to be exactly aligned on the page!
+% View the page in Adobe Acrobat with command R to get a ruler.
+% The ruler doesn't match exactly ...
+
+\usepackage[margin=0.0in]{geometry}
+
+% ******************************************************************************
+
+% Set up pstricks
+% http://www.ctan.org/tex-archive/graphics/pstricks/doc/pstnews1-14.pdf
+% or section 3.4 in
+% http://www.ctan.org/tex-archive/graphics/pstricks/README
+\usepackage{pstricks} % allows using PSTricks
+\usepackage{pst-node} % nodes in pst
+\usepackage{graphics}
+\usepackage{tgschola}
+\usepackage[T1]{fontenc}
+\graphicspath{ {/home/rtc/texlive/} }
+% \usepackage{color} % see above - it's loaded by pstricks.
+
+% ******************************************************************************
+
+% Adjust exact lower left corner for your printer
+\newcommand{\xadjust}{0.0cm}
+% \newcommand{\yadjust}{0.3cm}
+\newcommand{\yadjust}{0.25cm}
+
+\pagestyle{empty} % removes page numbers
+
+% ******************************************************************************
+
+%\multirput*[refpoint]{angle}(x0,y0)(x1,y1){int}{stuff }
+
+\begin{document}
+\noindent
+\setlength{\unitlength}{1in}
+\rput[bl]{0}(0.75in,-10.50in){% global set of lower left corner
+ \rput[bl]{0}(\xadjust,\yadjust){%
+  % show the psgrid to see where the cards will be placed
+  %\psgrid[subgriddiv=1,xunit=3.5in,yunit=2.0in]%
+  %       (0,0)(-20,-20)(20,20) % provide a grid from PSTricks
+  \multirput[bl](0,0)(3.5in,0.0in){2}{%
+  \multirput[bl](0,0)(0.0in,2.0in){5}{%
+   \makebox(3.5,2.0){% x,y size of box, inches
+    \shortstack[l]{%
+     \input{guts.tex}% use \\ to separate lines in guts
+    }%
+   }%
+  }%
+  }%
+ }%
+}
+\end{document}
+
+% \psgrid(0,0)(-20,-20)(20,20) % provide a grid from PSTricks
+% \psgrid[subgriddiv=1,unit=1in](0,0)(-20,-20)(20,20) %provide a grid from PSTricks
+% The basic syntax for the Latex picture environment is.
+% \begin{picture}(width,height)(x-offset,y-offset)
+% x-offset of 1 moves LEFT 1 inch!
+% y-offset of 1 moves DOWN 1 inch!
+%
+% \begin{picture}(8.5,11)(0.0,0.3937) % revised for 5 vertical per page
+% 5 cards vertical per page
+% \begin{picture}(8.5,11)(-0.20,+0.50)
+% \begin{picture}(8.5,11)(-0.20,+0.58) % ok for home too low for work
+\begin{picture}(8.5,11)(-0.20,+0.50) %  ok for home
+  \thicklines
+  % 2 is the number of cards horizontally
+
+%\vspace{10.0in}\hspace{0in}% start at lower left point
+%  \multiput(0,0)(3.7,0.0){2}{ % horizontal (x) motion
+% revise for minimalist gap between cards 3.5" + gap:
+% \multiput(0,0)(3.54,0.0){2}{ % horizontal (x) motion
+% 2009 Nov 26: no gap:
+  \multiput(0,0)(3.50,0.0){2}{ % horizontal (x) motion
+% numbers for 4 per page:
+%     \multiput(0,0)(0.0,2.15625){\verticalcards}{ % vertical (y) motion
+% numbers for 5 per page:
+%     \multiput(0,0)(0.0,2.1){\verticalcards}{ % vertical (y) motion
+%
+% revise for minimalist gap between cards, 2.0"+gap:
+%    \multiput(0,0)(0.0,2.04){\verticalcards}{ % vertical (y) motion
+% 2009 Nov 26: no gap:
+    \multiput(0,0)(0.0,2.00){\verticalcards}{ % vertical (y) motion
+%       \framebox(3.5,2){ % x,y size of box, inches
+        \makebox(3.5,2){ % x,y size of box, inches
+           \shortstack[l]{
+\input{guts.tex}
+           } % end shortstack
+        } % end makebox
+%       } % end framebox
+     } % end multiput
+  } % end multiput
+\end{picture}
+\end{document}
