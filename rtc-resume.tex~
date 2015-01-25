@@ -1,0 +1,107 @@
+% rtc-resume.tex
+\documentclass[11pt]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{purple}
+\usepackage[utf8]{inputenc}
+\usepackage[left=.5in,right=.5in,top=.5in,bottom=.5in,letterpaper]{geometry}
+
+\firstname{Rachael}
+\familyname{Carlson}
+\address{3308 N. Bremen St.}{Milwaukee, WI 53212}
+\phone{(612) 616-4422}
+\email{rtc@sleeplimited.org}
+\homepage{sleeplimited.org}
+\begin{document}
+
+\makecvtitle
+\section{Objective}
+\cvline{}{\textbf{Use my administrative and interpersonal skills to support
+Milwaukee public services}}
+
+\section{Education}
+\cventry{May 2013}{Master's of Liberal Studies}{University of
+Wisconsin-Milwaukee}{Milwaukee, WI}{\textit{3.9/4.0}}{Chancellor's
+Award: Scholarship for Graduate Studies}
+\cventry{May 2011}{Bachelor's of Fine Arts}{University of
+Wisconsin-Milwaukee}{Milwaukee, WI}{\textit{3.5/4.0}}{}
+\cventry{May 2011}{Rock and Roll Studies Certificate}{University of
+Wisconsin-Milwaukee}{Milwaukee, WI}{}{}
+
+\section{Experience}
+\cventry{2010-Current}{Archivist, Bibliographer, and Office
+Manager}{Spiritfugitive, LLC}{}{}{\begin{itemize}
+    \item Analyze and disseminate thousands of documents and media
+        related to American Free Verse Poetry History 
+    \item Compile extensive discography, filmography, and bibliography
+        for textbook published by a major academic publisher on the
+        subject of American oral tradition music
+    \item Communicate orally and in writing with numerous libraries,
+        publishers, and record labels
+\end{itemize}
+}
+\cventry{2008-2013}{Library Assistant}{University of
+    Wisconsin-Milwaukee Golda Meir Music \& Curriculum
+Libraries}{}{}{\begin{itemize}
+    \item Provide reference and circulation services in Music \&
+        Curriculum sujbect areas through in-person, telephone, and online
+        methods for thousands of patrons 
+    \item Organize and maintain the efficiency of all office related
+        activities
+    \item Digitize sound materials for patron and archive usage 
+    \item Maintain and update the Music Library website with skills
+        learned on site 
+    \item Operate sound and presentation equipment for classroom purposes
+\end{itemize}
+}
+\cventry{2011-2012}{Assistant Teacher}{University of
+Wisconsin-Milwaukee}{}{}{\begin{itemize}
+    \item Lecture on the subject of American Folk and Popular music
+        emphasizing historical perspective and lyrical development
+    \item Develop engaging and relevant curriculum within the subject
+        of Rock and Roll and its literary aspects
+    \item Support classroom technologies and facilities to increase
+        classroom operations efficiency
+    \item Assist the other instructor with lesson plans on the subject
+        of American Vernacular and Popular music
+\end{itemize}
+}
+
+\section{Volunteer Experience}
+\cventry{2008-present}{Volunteer}{Riverwest Co-op Grocery \&
+Cafe}{Human Resources \& Inclusion Committees}{}{\begin{itemize}
+    \item Implement a new and cohesive form for meeting minutes which
+        ensures accountability and efficiency 
+    \item Write minutes for each meeting, ensuring accuracy and action items
+        are addressed
+    \item Ensure that each employee is receiving the proper amount of money for
+        each paycheck
+    \item Organize Anti-Discrimination training for Board and Staff 
+    \item Participate in various sub-committees that deal with hiring,
+        customer service, and policy revision, creation, and enactment
+\end{itemize}
+}
+
+\section{References Available Upon Request}
+% \section{Master's Thesis}
+% \cvline{Title}{\emph{Visions of \emph{Blonde on Blonde}: Toward a
+% Foundation of Rock and Roll Criticism}}
+% \cvline{Supervisor}{Dr. Martin Jack Rosenblum}
+% \cvline{Description}{\small \emph{Blonde on Blonde} by Bob Dylan
+% contains some of the earliest examples of the complex narrative in
+% popular music; this complex narrative changes the way that Popular
+% Music Studies works with Pop music and a critical study of its
+% contents needs to be started.  This paper provides a theoretical
+% foundation of New Criticism, Semiotics, and Jungian Criticism upon
+% which a critical canon of the complex narrative can built.}
+
+
+% \section{Publications and Recordings}
+% \cvline{Bibliographer}{\emph{Searching for Rock and Roll}.  Martin
+% Jack Rosenblum and David Luhrssen.  CengageLearning: Mason, 2012.
+% Fourth Edition.  978-0-495-99152-6}
+% \cvline{Composer, Musician}{\emph{Remove the
+% Believer} by SUN ROCK MAN.  \url{http://www.cdbaby.com/cd/sunrockman}}
+
+
+\end{document}
