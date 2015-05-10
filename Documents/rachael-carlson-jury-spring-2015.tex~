@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage{tgtermes}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=.5in,right=.5in,top=.5in,bottom=.5in,letterpaper]{geometry}
+\makeatletter
+
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+\begin{document}
+\hspace{-.6cm}Rachael Carlson \\
+Spring Semester 2015 \\
+MUSPERF 746-804 \\
+\vspace{.5cm}
+\section{Repertoire Studied}
+\vspace{.25cm}
+``Grim to the Brim,'' by Leo Kottke \\
+``Jack Fig,'' by Leo Kottke \\
+``Bourree Voltige,'' by Pierre Bensusan \\
+``Reynardine,'' Trad., arranged by Bert Jansch \\
+``Black Moon/Westward Move,'' by Clive Carroll \\
+\vspace{.5cm}
+\section{Log of Public Performances}
+\vspace{.25cm}
+April 17 Colectivo Prospect\\
+\-\hspace{.6cm}``Bourree Voltige,'' by Pierre Bensusan
+\end{document}
