@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.2)  21 JAN 2016 11:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.2)  26 JAN 2016 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,7 +1009,7 @@ Here is how much of TeX's memory you used:
 enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}</usr/share/texmf/fo
 nts/type1/public/tex-gyre/qcsr.pfb></usr/share/texmf/fonts/type1/public/tex-gyr
 e/qcsri.pfb>
-Output written on business-cards1.front.pdf (1 page, 46680 bytes).
+Output written on business-cards1.front.pdf (1 page, 46676 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream

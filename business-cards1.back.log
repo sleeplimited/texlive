@@ -1,9 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.9)  19 JAN 2015 20:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.2)  26 JAN 2016 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input business-cards1.back.tex
+**business-cards1.back.tex
 (./business-cards1.back.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
 Document Class: memoir 2013/05/30 v3.7b configurable book, report, article docu
 ment class
@@ -885,17 +887,20 @@ LaTeX Font Info:    Try loading font information for T1+qcs on input line 100.
 File: t1qcs.fd 2009/09/25 v1.2 font definition file for T1/qcs
 ))
 
+Class memoir Warning: \headsep is negative on input line 19.
+
+
 ******************************************************
 Stock height and width: 147.95433pt by 256.0748pt
 Top and edge trims: 4.26791pt and 4.26791pt
 Page height and width: 139.4185pt by 247.53897pt
 Text height and width: 122.34685pt by 230pt
-Spine and edge margins: 8.53581pt and 8.53584pt
-Upper and lower margins: 8.53581pt and 8.53584pt
-Headheight and headsep: 0.1pt and 7.4358pt
+Spine and edge margins: 0pt and 17.07166pt
+Upper and lower margins: 14.22636pt and 2.84529pt
+Headheight and headsep: 0.1pt and -0.87364pt
 Footskip: 0.1pt
 Columnsep and columnseprule: 10pt and 0pt
-Marginparsep and marginparwidth: 7pt and 1pt
+Marginparsep and marginparwidth: 7pt and 3.07166pt
 Sidecapsep and sidecapwidth: 7pt and 101pt
 Sidebarhsep and sidebarwidth: 7pt and 101pt
 Sidebarvsep and sidebartopsep: 13.6pt and 0pt
@@ -994,22 +999,26 @@ e
 <logo.png, id=4, 374.39874pt x 809.0225pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 24.
-(pdftex.def)             Requested size: 46.79973pt x 101.12756pt.
- [1
+Package pdftex.def Info: logo.png used on input line 23.
+(pdftex.def)             Requested size: 18.72102pt x 40.45349pt.
 
- <./logo.png>]
-(./business-cards1.back.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+[1
+
+ <./logo.png>] (./business-cards1.back.aux) ) 
 Here is how much of TeX's memory you used:
  14200 strings out of 493304
- 246383 string characters out of 6139872
+ 246383 string characters out of 6139871
  311699 words of memory out of 5000000
  17415 multiletter control sequences out of 15000+600000
  8098 words of font info for 18 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 61i,10n,55p,450b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,10n,55p,431b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on business-cards1.back.pdf (1 page, 34385 bytes).
+Output written on business-cards1.back.pdf (1 page, 34383 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  8 compressed objects within 1 object stream
